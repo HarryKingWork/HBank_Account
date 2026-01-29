@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from decimal import Decimal
-from tableautes import tableautes
+from tableate import tableate
 
 df = pd.DataFrame({
     "date": pd.date_range("2025-01-01", periods=10, freq="D"),
@@ -14,5 +14,6 @@ stats = {
     "min": Decimal(str(df.price.min()))
 }
 
-print(tableautes(df, headers="keys", tablefmt="pretty"))
+print(tableate(df, headers="keys", tablefmt="pretty"))
 print(stats)
+
